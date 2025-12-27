@@ -3,7 +3,7 @@
 class Personagem {
     private int $vida;
     private int $nivel;
-    public function __construct(private string $nome, int $vida, int $nivel, public readonly Classe $classe) {
+    public function __construct(protected string $nome, int $vida, int $nivel, public readonly Genero $genero) {
         if ($nome === "") {
             throw new InvalidArgumentException("");
         } else{
