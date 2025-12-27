@@ -11,4 +11,8 @@ class Arqueiro extends Personagem{
     public function getRange(): int {
         return $this->range;
     }
+
+    public function ataqueBasico(string $alvo) { 
+        echo"Arqueiro {$this->nome} atirou no {$alvo}\n";
+    }
 }

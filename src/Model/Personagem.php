@@ -25,7 +25,7 @@ class Personagem {
     public function getFNivel(): int {  
         return $this->nivel;
     }
-    public function atacar(string $alvo) { 
-        echo"{$this->nome} atacou {$alvo}\n";
+    public function ataqueBasico(string $alvo) { 
+        echo"Personagem atacou {$alvo}\n";
     }
 }

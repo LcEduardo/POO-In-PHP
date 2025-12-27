@@ -12,10 +12,10 @@ echo "\nNome do personagem: {$bruxo->getNome()}";
 echo "\nvida: {$bruxo->getVida()}\n";
 echo "Genero: {$bruxo->genero->name}\n";
 echo "Toxicidade do Bruxo: {$bruxo->toxicidade}\n";
-$bruxo->ataqueMonster('Orc');
+$bruxo->ataqueBasico('Orc');
 
 echo "\n";
 
 $arqueiro = new Arqueiro('Legolas', 80, 30, Genero::Masculino, 20);
-$arqueiro->atacar('bruxa');
+$arqueiro->ataqueBasico('bruxa');
 echo "{$arqueiro->getNome()} tem range: {$arqueiro->getRange()}";
