@@ -1,29 +1,21 @@
 <?php
 
 abstract class Personagem implements AtaqueBasico{
-    private int $vida;
-    private int $nivel;
-    public function __construct(protected string $nome, int $vida, int $nivel, public readonly Genero $genero) {
+    use AtributosBasicosTrait;
+    // O construtor da classe mãe recebe TUDO o que é básico
+    public function __construct(
+        string $nome, 
+        int $vida, 
+        int $nivel, 
+        public readonly Genero $genero // Atributo genero aqui
+    ) {
         if ($nome === "") {
             throw new InvalidArgumentException("");
         } else{
             $this->nome = $nome;
         }
-
         $this->vida = $vida;
         $this->nivel = $nivel;
-    }
-  
-    public function getNome(): string {
-        return $this->nome;
-    }
-
-    public function getVida(): int {
-        return $this->vida;
-    }
-
-    public function getFNivel(): int {  
-        return $this->nivel;
     }
     abstract public function ataqueBasico(string $alvo): void;
 }

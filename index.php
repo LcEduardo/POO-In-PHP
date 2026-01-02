@@ -1,6 +1,7 @@
 <?php
 
-require __DIR__ ."/src/Model/AtaqueBasico.php";
+require __DIR__ ."/src/Model/Interface/AtaqueBasico.php";
+require __DIR__ ."/src/Model/Traits/AtributosBasicosTrait.php";
 require __DIR__ ."/src/Model/Genero.php";
 require __DIR__ ."/src/Model/Personagem.php";
 require __DIR__ ."/src/Model/Monstro.php";
