@@ -1,7 +1,9 @@
 <?php
 
+require __DIR__ ."/src/Model/AtaqueBasico.php";
 require __DIR__ ."/src/Model/Genero.php";
 require __DIR__ ."/src/Model/Personagem.php";
+require __DIR__ ."/src/Model/Monstro.php";
 require __DIR__ ."/src/Model/Bruxo.php";
 require __DIR__ ."/src/Model/Arqueiro.php";
 
@@ -19,3 +21,6 @@ echo "\n";
 $arqueiro = new Arqueiro('Legolas', 80, 30, Genero::Masculino, 20);
 $arqueiro->ataqueBasico('bruxa');
 echo "{$arqueiro->getNome()} tem range: {$arqueiro->getRange()}";
+
+$montro = new Monstro('Gigante', 100, 100);
+$montro->ataqueBasico($arqueiro->getNome());

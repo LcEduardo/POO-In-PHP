@@ -1,9 +1,10 @@
 <?php
 
-abstract class Personagem implements AtaqueBasico{
-    private int $vida;
+class Monstro implements AtaqueBasico{
+
+    private int $vida; 
     private int $nivel;
-    public function __construct(protected string $nome, int $vida, int $nivel, public readonly Genero $genero) {
+    public function __construct(protected string $nome, int $vida, int $nivel) {
         if ($nome === "") {
             throw new InvalidArgumentException("");
         } else{
@@ -13,7 +14,7 @@ abstract class Personagem implements AtaqueBasico{
         $this->vida = $vida;
         $this->nivel = $nivel;
     }
-  
+
     public function getNome(): string {
         return $this->nome;
     }
@@ -25,5 +26,8 @@ abstract class Personagem implements AtaqueBasico{
     public function getFNivel(): int {  
         return $this->nivel;
     }
-    abstract public function ataqueBasico(string $alvo): void;
+
+    public function ataqueBasico(string $alvo): void { 
+        echo"\nMonstro {$this->nome} está atacando {$alvo}\n";
+    }
 }
