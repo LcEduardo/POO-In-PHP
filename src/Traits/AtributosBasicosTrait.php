@@ -1,9 +1,10 @@
 <?php
 
+namespace WEBSERVER\Traits;
 trait AtributosBasicosTrait {
     private int $vida;
     private int $nivel;
-    private string $nome; // Removi o construtor daqui para evitar conflitos
+    private string $nome; 
 
     public function getNome(): string { return $this->nome; }
     public function getVida(): int { return $this->vida; }

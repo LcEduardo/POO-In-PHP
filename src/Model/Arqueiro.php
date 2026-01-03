@@ -1,5 +1,6 @@
 <?php
 
+namespace WEBSERVER\Model;
 class Arqueiro extends Personagem{
 
     private int $range;

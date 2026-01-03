@@ -1,12 +1,18 @@
 <?php
 
-require __DIR__ ."/src/Model/Interface/AtaqueBasico.php";
-require __DIR__ ."/src/Model/Traits/AtributosBasicosTrait.php";
+require __DIR__ ."/src/Interface/AtaqueBasico.php";
+require __DIR__ ."/src/Traits/AtributosBasicosTrait.php";
 require __DIR__ ."/src/Model/Genero.php";
 require __DIR__ ."/src/Model/Personagem.php";
 require __DIR__ ."/src/Model/Monstro.php";
 require __DIR__ ."/src/Model/Bruxo.php";
 require __DIR__ ."/src/Model/Arqueiro.php";
+
+use WEBSERVER\Model\{
+    Bruxo, Arqueiro, Monstro, Genero
+};
+
+
 
 echo"---------- Monte seu personagem ----------";
 

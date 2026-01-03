@@ -1,5 +1,9 @@
 <?php
 
+namespace WEBSERVER\Model;
+
+use WEBSERVER\Interface\AtaqueBasico; 
+use WEBSERVER\Traits\AtributosBasicosTrait;
 class Monstro implements AtaqueBasico{
 
     use AtributosBasicosTrait;
@@ -10,7 +14,7 @@ class Monstro implements AtaqueBasico{
         int $nivel,
     ) {
         if ($nome === "") {
-            throw new InvalidArgumentException("");
+            echo"Nome não pode ser vazio";
         } else{
             $this->nome = $nome;
         }
