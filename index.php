@@ -18,10 +18,13 @@ use WEBSERVER\Model\{
 echo"---------- Monte seu personagem ----------\n";
 
 try {
-    $montro = new Monstro('', 100, 100);
+    $montro = new Monstro( 'Orc', 100, 100);
 }catch(Exception $e){
     echo $e->getMessage() . "\n";
     $montro = new Monstro('Goblins', 100, 100);
+}catch(ArgumentCountError $e){
+    echo $e->getMessage() . "\n";
+    return;
 }
 
 $bruxo = new Bruxo('Geralt', 100, 20, Genero::Masculino, 10);
